@@ -27,13 +27,14 @@
                     <th>NIM</th>
                     <th>Nama</th>
                     <th>Umur</th>
+                    <th>Aksi</th>
                 <tr>
                 <?php while ($row = $result->fetch_assoc()): ?>
                 <tr>
                     <td><?= $row['nim']; ?></td>
                     <td><?= $row['nama']; ?></td>
                     <td><?= $row['umur']; ?></td>
-                    <td> <a href="detail_mahasiswa.php?nim=<?= urlencode($row['nim']);?>">View Detail</a></td>
+                    <td> <a href="display_detail.php?nim=<?= urlencode($row['nim']);?>">View Detail</a></td>
                 <tr>
                 <?php endwhile; ?>
                 </table>
